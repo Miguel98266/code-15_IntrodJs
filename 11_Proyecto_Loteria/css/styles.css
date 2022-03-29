@@ -1,0 +1,18 @@
+[class*="col"] {
+    border: 1px solid black;
+    min-height: 40px;
+
+  }
+.rojo{
+    background-color: rgb(240, 192, 192);
+}
+
+img{
+    height: auto;
+    width: 100px;
+}
+
+.moneda{
+    height: auto;
+    width: 50px;
+}

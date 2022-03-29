@@ -1,0 +1,22 @@
+.btn-aquamarine{
+    background-color: rgb(4, 209, 216);
+}
+.btn-aquamarine:hover{
+    background-color: rgb(3, 184, 190);
+}
+.text-gray{
+    color: rgb(128, 128, 128);
+}
+
+.text-aquamarine{
+    color: rgb(4, 209, 216);
+}
+.card-img-top {
+    width: 100%;
+    height: 12vw;
+    object-fit: cover;
+}
+
+.margen{
+    border: none;
+}

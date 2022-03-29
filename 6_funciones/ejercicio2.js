@@ -52,51 +52,63 @@ function cupon(codigo) {
     } 
 }
 cupon("Novedad");
+
 // 6. Crear una función que reciba base y altura de un triángulo y nos muestre cuál es su perímetro
 function perimetroTriangulo(base,altura) {
-    console.log(`El perimetro del tringulo de una base ${base} y altura ${altura} es ${(2*altura)+base}`);
+    return (2*altura)+base
+    // console.log(`El perimetro del tringulo de una base ${base} y altura ${altura} es ${(2*altura)+base}`);
 }
-perimetroTriangulo(3,8)
+perimetringulo=perimetroTriangulo(3,8);
+console.log(`El perimetro del tringulo es ${perimetringulo}`)
+
 // 7. Crear una función que reciba base y altura de un triángulo y nos muestre cuál es su área
 function areaTriangulo(base,altura) {
-    console.log(`El area del tringulo de una base ${base} y altura ${altura} es ${(base*altura)/2}`);
+    return (base*altura)/2;
+    // console.log(`El area del tringulo de una base ${base} y altura ${altura} es ${(base*altura)/2}`);
 }
-areaTriangulo(3,8)
+areatrin=areaTriangulo(3,8);
+console.log(`El area del tringulo es ${areatrin}`);
 // 8. Crear una función que reciba 2 números y me entregue el número más alto
 function numeroMayor(num1,num2) {
     if (num1>num2) {
-        console.log(`El numero ${num1} es mayor a ${num2}`)
+        return num1;
     }else{
-        console.log(`El numero ${num2} es mayor a ${num1}`)
+        return num2;
     }
 }
-numeroMayor(2,4);
+mayor=numeroMayor(2,4);
+console.log(`El numero ${mayor} es el mayor`)
 // 9. Crear una función que reciba 2 números y me entregue el número más pequeño
 function numeroMenor(num1,num2) {
     if (num1<num2) {
+        return num1;
         console.log(`El numero ${num1} es menor a ${num2}`)
     }else{
+        return num2;
         console.log(`El numero ${num2} es menor a ${num1}`)
     }
 }
-numeroMenor(2,4);
+menor=numeroMenor(2,4);
+console.log(`El numero ${menor} es menor`)
 // 10. Crear una función que reciba 3 strings y nos muestre cuál tiene más caracteres
 function stringMasLargo(string1,string2,string3) {
     if (string1.length > string2.length && string1.length > string3.length) {
-        console.log(`La cadena ${string1} es la mas larga`);
+        return string1;
     } else if(string2.length > string1.length && string2.length > string3.length){
-        console.log(`La cadena ${string2} es la mas larga`)
+        return string2;
     } else{
-        console.log(`La cadena ${string3} es la mas larga`)
+        return string3;
     }
 }
-
-stringMasLargo("Hola","H","Ho");
+string=stringMasLargo("Hola","H","Ho");
+console.log(`La cadena ${string} es la mas larga`)
 // 11. Crear una función que reciba 1 número y me lo muestre al cubo
 function numeroAlCubo(numero) {
-    console.log(`El cubo de ${numero} es ${numero*numero*numero}`)
-}
-numeroAlCubo(2);
+    return(numero*numero*numero)
+} 
+num=2;
+cubo=numeroAlCubo(num);
+console.log(`El numero al cubo de ${num} es :${cubo} `)
 // 12. Crear una función que reciba una palabra y me muestre cuántas "a" contiene
 function numeroDeA(string) {
     contador=0;
@@ -131,3 +143,13 @@ let array = ['a', 'b', 'c',' d', 'e', 'f']
 }
 numeroArray(5);
 
+// Funcion con return
+
+function calcularAreaCuadrado(lado){
+    let area=lado*lado;
+    // return ->Nos indica el final de la función y el return nos entrega el valor por la funcion existe
+    return area;
+}
+
+area=calcularAreaCuadrado(5);
+console.log(area);
