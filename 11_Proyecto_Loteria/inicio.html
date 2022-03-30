@@ -13,26 +13,29 @@
 
 <body>
   <h1 class="text-center">Loteria Mexicana</h1>
-  
+  <!-- Boton de inicio -->
+  <button type="button" class="btn btn-primary btn-lg mx-auto d-block" id="inicio">Iniciar Partida</button>
+  <!-- Card con tarjetas -->
   <div class="card mx-auto text-center my-4" style="width: 18rem;">
-    <img src="Cartas lotería/1.jpg" class="card-img-top" alt="">
-    
+    <img src="" class="card-img-top" alt="">
     <div class="card-body">
-      <h5 class="card-title">El Gallo</h5>
+      <h5 class="card-title"></h5>
       <a href="#" class="btn btn-primary" id="carta">Obtener otra carta</a>
     </div>
   </div>
-  <div class="col-12 my-4">
+  <!-- Tableros -->
+  <div class="col-12 my-4 border-0">
     <div class="row g-0">
-      <div class="col-5 mx-auto ">
+      <!-- Tablero Jugador 1 -->
+      <div class="col-4 mx-auto ">
         <div class="row g-0">
           <h2 class="text-center">Jugardor 1</h2>
-          <div class="col-3  text-center ">1<img class="img-thumbnail " src="Cartas lotería/1.jpg" alt=""> <input
-              class="form-check-input d-block mx-auto" type="checkbox" value="gallo" id="gallo"></div>
+          <div class="col-3 text-center "><img class="img-thumbnail " src="Cartas lotería/1.jpg" alt=""> 
+            <input class="form-check-input d-block mx-auto" type="checkbox" name="jugador1" value="El gallo" id="gallo" onclick="iaddon()"></div>
           <div class="col-3  text-center">2<img class="img-thumbnail" src="Cartas lotería/2.jpg" alt=""> 
-            <div class="circle circle-sm">
+            <!-- <div class="circle circle-sm">
               <img src="img/moneda.jpg" class="moneda" alt="...">
-            </div>
+            </div> -->
           </div>
           <div class="col-3  text-center">3<img class="img-thumbnail" src="Cartas lotería/3.jpg" alt=""> </div>
           <div class="col-3  text-center">4<img class="img-thumbnail" src="Cartas lotería/4.jpg" alt=""> </div>
@@ -53,7 +56,8 @@
           <div class="col-3 text-center">16<img class="img-thumbnail " src="Cartas lotería/16.jpg" alt=""></div>
         </div>
       </div>
-      <div class="col-5 mx-auto">
+      <!-- Tablero Jugador 2 -->
+      <div class="col-4 mx-auto">
         <div class="row g-0">
           <h2 class="text-center">Jugardor 2</h2>
           <div class="col-3  text-center ">1<img class="img-thumbnail " src="Cartas lotería/1.jpg" alt=""> <input
