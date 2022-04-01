@@ -1,122 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Loteria</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-  <body>
-   <h1 class="text-center">Loteria Mexicana</h1>
-   <h2 class="text-center">Selecciona un tableto para porder jugar</h2>
-    
-   <div class="col-12 my-4">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loteria</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@600&family=Palette+Mosaic&family=Playfair+Display:wght@700&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/styles.css">
+  
+</head>
+
+<body>
+
+<!-- Modal Instrucciones-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel">Instrucciones</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h5>Reglas de la lotería:</h5>
+        <ul>
+          <li>Cada jugador elige una tabla al azar.</li>
+          <li>Se utiliza un objeto pequeño para marcar las cartas extraídas (piedritas, frijoles...).</li>
+          <li>El gritón da comienzo al juego, exclamando: ¡Corre!</li>
+          <li>Si la imagen de la carta está en la tabla del jugador, se coloca el objeto encima.</li>
+          <li>Gana quien complete en su tabla todas las cartas y grite "¡lotería!"</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <h1 class="text-center">Loteria Mexicana</h1>
+  <h2 class="text-center">Selecciona un tableto para porder jugar</h2>
+  <!-- <button id="btnbarajear">Barajear</button> -->
+  <div class="col-12 my-4 border-0">
     <div class="row g-0">
       <!-- Tablero Jugador 1 -->
-      <div class="col-3 mx-auto ">
+      <div class="col-3 mx-auto border-0">
         <div class="row g-0">
           <h2 class="text-center">Tablero 1</h2>
-          <div class="col-3 text-center">1<img class="img-thumbnail" id="tabl-1" src="" alt=""> <input
-              class="form-check-input d-block mx-auto" type="checkbox" value="gallo" id="gallo"></div>
-          <div class="col-3  text-center">2<img class="img-thumbnail" src="Cartas lotería/2.jpg" alt=""> 
-          </div>
-          <div class="col-3  text-center">3<img class="img-thumbnail" src="Cartas lotería/3.jpg" alt=""> </div>
-          <div class="col-3  text-center">4<img class="img-thumbnail" src="Cartas lotería/4.jpg" alt=""> </div>
+          <div class="col-3 text-center "><img class="img-thumbnail tablero1"></div>
+          <div class="col-3  text-center"><img class="img-thumbnail tablero1"> </div>
+          <div class="col-3  text-center"><img class="img-thumbnail tablero1"> </div>
+          <div class="col-3  text-center"><img class="img-thumbnail tablero1"> </div>
           <!-- Segunda Fila -->
-          <div class="col-3 text-center">5<img class="img-thumbnail " src="Cartas lotería/5.jpg" alt=""></div>
-          <div class="col-3 text-center">6<img class="img-thumbnail " src="Cartas lotería/6.jpg" alt=""></div>
-          <div class="col-3 text-center">7<img class="img-thumbnail " src="Cartas lotería/7.jpg" alt=""></div>
-          <div class="col-3 text-center">8<img class="img-thumbnail " src="Cartas lotería/8.jpg" alt=""></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero1 "></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero1 "></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero1 "></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero1 "></div>
           <!-- Tercera Fila -->
-          <div class="col-3 text-center">9<img class="img-thumbnail " src="Cartas lotería/9.jpg" alt=""></div>
-          <div class="col-3 text-center">10<img class="img-thumbnail " src="Cartas lotería/10.jpg" alt=""></div>
-          <div class="col-3 text-center">11<img class="img-thumbnail " src="Cartas lotería/11.jpg" alt=""></div>
-          <div class="col-3 text-center">12<img class="img-thumbnail " src="Cartas lotería/12.jpg" alt=""></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero1 "></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero1 "></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero1 "></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero1 "></div>
           <!-- Cuarta Fila  -->
-          <div class="col-3 text-center">13<img class="img-thumbnail " src="Cartas lotería/13.jpg" alt=""></div>
-          <div class="col-3 text-center">14<img class="img-thumbnail " src="Cartas lotería/14.jpg" alt=""></div>
-          <div class="col-3 text-center">15<img class="img-thumbnail " src="Cartas lotería/15.jpg" alt=""></div>
-          <div class="col-3 text-center">16<img class="img-thumbnail " src="Cartas lotería/16.jpg" alt=""></div>
-          <a class="btn btn-primary d-block" href="inicio.html">Aceptar</a>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero1 "></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero1 "></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero1 "></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero1 "></div>
+          
         </div>
-   
 
+
+      </div>
+      <div class="col-3 mx-auto border-0">
+        <div class="row g-0">
+          <h2 class="text-center">Tablero 2</h2>
+          <div class="col-3  text-center "><img class="img-thumbnail tablero2"></div>
+          <div class="col-3  text-center"><img class="img-thumbnail tablero2">
+          </div>
+          <div class="col-3  text-center"><img class="img-thumbnail tablero2"> </div>
+          <div class="col-3  text-center"><img class="img-thumbnail tablero2"> </div>
+          <!-- Segunda Fila -->
+          <div class="col-3 text-center"><img class="img-thumbnail tablero2 "></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero2 "></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero2 "></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero2 "></div>
+          <!-- Tercera Fila -->
+          <div class="col-3 text-center"><img class="img-thumbnail tablero2 "></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero2 "></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero2 "></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero2 "></div>
+          <!-- Cuarta Fila  -->
+          <div class="col-3 text-center"><img class="img-thumbnail tablero2 "></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero2 "></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero2 "></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero2 "></div>
+          
+        </div>
+
+      </div>
+      <div class="col-3 mx-auto border-0">
+        <div class="row g-0">
+          <h2 class="text-center">Tablero 3</h2>
+          <div class="col-3  text-center "><img class="img-thumbnail tablero3 "> </div>
+          <div class="col-3  text-center"><img class="img-thumbnail tablero3">
+          </div>
+          <div class="col-3  text-center"><img class="img-thumbnail tablero3"> </div>
+          <div class="col-3  text-center"><img class="img-thumbnail tablero3"> </div>
+          <!-- Segunda Fila -->
+          <div class="col-3 text-center"><img class="img-thumbnail tablero3 "></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero3 "></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero3 "></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero3 "></div>
+          <!-- Tercera Fila -->
+          <div class="col-3 text-center"><img class="img-thumbnail tablero3 "></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero3 "></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero3 "></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero3 "></div>
+          <!-- Cuarta Fila  -->
+          <div class="col-3 text-center"><img class="img-thumbnail tablero3 "></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero3 "></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero3 "></div>
+          <div class="col-3 text-center"><img class="img-thumbnail tablero3 "></div>
+          <!-- <a class="btn btn-primary d-block" onclick="tablero3()">Aceptar</a> -->
+        </div>
+
+
+      </div>
     </div>
-    <div class="col-3 mx-auto ">
+  </div>
+  <!-- <div class="container text-center">
+    <a class="btn btn-warning btn-lg" id="continuar">Continuar</a>
+  </div> -->
+  <div class="col-12 my-4 border-0">
+    <form action="inicio.html" >
       <div class="row g-0">
-        <h2 class="text-center">Tablero 2</h2>
-        <div class="col-3  text-center ">1<img class="img-thumbnail " src="Cartas lotería/1.jpg" alt=""> <input
-            class="form-check-input d-block mx-auto" type="checkbox" value="El gallo" id="gallo"></div>
-        <div class="col-3  text-center">2<img class="img-thumbnail" src="Cartas lotería/2.jpg" alt=""> 
+        <div class="col-3  border-0 mx-auto">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="jugador1" id="tablero1j1" value="tablero1">
+            <label class="form-check-label" for="jugador1">
+              Jugador 1
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="jugador2" id="tablero1j2" value="tablero1">
+            <label class="form-check-label" for="jugador2">
+              Jugador 2
+            </label>
+          </div>
         </div>
-        <div class="col-3  text-center">3<img class="img-thumbnail" src="Cartas lotería/3.jpg" alt=""> </div>
-        <div class="col-3  text-center">4<img class="img-thumbnail" src="Cartas lotería/4.jpg" alt=""> </div>
-        <!-- Segunda Fila -->
-        <div class="col-3 text-center">5<img class="img-thumbnail " src="Cartas lotería/5.jpg" alt=""></div>
-        <div class="col-3 text-center">6<img class="img-thumbnail " src="Cartas lotería/6.jpg" alt=""></div>
-        <div class="col-3 text-center">7<img class="img-thumbnail " src="Cartas lotería/7.jpg" alt=""></div>
-        <div class="col-3 text-center">8<img class="img-thumbnail " src="Cartas lotería/8.jpg" alt=""></div>
-        <!-- Tercera Fila -->
-        <div class="col-3 text-center">9<img class="img-thumbnail " src="Cartas lotería/9.jpg" alt=""></div>
-        <div class="col-3 text-center">10<img class="img-thumbnail " src="Cartas lotería/10.jpg" alt=""></div>
-        <div class="col-3 text-center">11<img class="img-thumbnail " src="Cartas lotería/11.jpg" alt=""></div>
-        <div class="col-3 text-center">12<img class="img-thumbnail " src="Cartas lotería/12.jpg" alt=""></div>
-        <!-- Cuarta Fila  -->
-        <div class="col-3 text-center">13<img class="img-thumbnail " src="Cartas lotería/13.jpg" alt=""></div>
-        <div class="col-3 text-center">14<img class="img-thumbnail " src="Cartas lotería/14.jpg" alt=""></div>
-        <div class="col-3 text-center">15<img class="img-thumbnail " src="Cartas lotería/15.jpg" alt=""></div>
-        <div class="col-3 text-center">16<img class="img-thumbnail " src="Cartas lotería/16.jpg" alt=""></div>
-        <a class="btn btn-primary d-block" href="inicio.html">Aceptar</a>
+        <div class="col-3  border-0 mx-auto">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="jugador1" id="tablero2j1" value="tablero2">
+            <label class="form-check-label" for="jugador1">
+              Jugador 1
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="jugador2" id="tablero2j2" value="tablero2">
+            <label class="form-check-label" for="jugador2">
+              Jugador 2
+            </label>
+          </div>
+        </div>
+      <div class="col-3 border-0 mx-auto">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="jugador1" id="tablero3j1" value="tablero3">
+          <label class="form-check-label" for="jugador1">
+            Jugador 1
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="jugador2" id="tablero3j2" value="tablero3">
+          <label class="form-check-label" for="jugador2">
+            Jugador 2
+          </label>
+        </div>
       </div>
-
-  </div>
-  <div class="col-3 mx-auto ">
-    <div class="row g-0">
-      <h2 class="text-center">Tablero 3</h2>
-      <div class="col-3  text-center ">1<img class="img-thumbnail " src="Cartas lotería/1.jpg" alt=""> <input
-          class="form-check-input d-block mx-auto" type="checkbox" value="gallo" id="gallo"></div>
-      <div class="col-3  text-center">2<img class="img-thumbnail" src="Cartas lotería/2.jpg" alt=""> 
-      </div>
-      <div class="col-3  text-center">3<img class="img-thumbnail" src="Cartas lotería/3.jpg" alt=""> </div>
-      <div class="col-3  text-center">4<img class="img-thumbnail" src="Cartas lotería/4.jpg" alt=""> </div>
-      <!-- Segunda Fila -->
-      <div class="col-3 text-center">5<img class="img-thumbnail " src="Cartas lotería/5.jpg" alt=""></div>
-      <div class="col-3 text-center">6<img class="img-thumbnail " src="Cartas lotería/6.jpg" alt=""></div>
-      <div class="col-3 text-center">7<img class="img-thumbnail " src="Cartas lotería/7.jpg" alt=""></div>
-      <div class="col-3 text-center">8<img class="img-thumbnail " src="Cartas lotería/8.jpg" alt=""></div>
-      <!-- Tercera Fila -->
-      <div class="col-3 text-center">9<img class="img-thumbnail " src="Cartas lotería/9.jpg" alt=""></div>
-      <div class="col-3 text-center">10<img class="img-thumbnail " src="Cartas lotería/10.jpg" alt=""></div>
-      <div class="col-3 text-center">11<img class="img-thumbnail " src="Cartas lotería/11.jpg" alt=""></div>
-      <div class="col-3 text-center">12<img class="img-thumbnail " src="Cartas lotería/12.jpg" alt=""></div>
-      <!-- Cuarta Fila  -->
-      <div class="col-3 text-center">13<img class="img-thumbnail " src="Cartas lotería/13.jpg" alt=""></div>
-      <div class="col-3 text-center">14<img class="img-thumbnail " src="Cartas lotería/14.jpg" alt=""></div>
-      <div class="col-3 text-center">15<img class="img-thumbnail " src="Cartas lotería/15.jpg" alt=""></div>
-      <div class="col-3 text-center">16<img class="img-thumbnail " src="Cartas lotería/16.jpg" alt=""></div>
-      <a class="btn btn-primary d-block" href="inicio.html">Aceptar</a>
     </div>
-
-
-</div>
-<div class="container-fluid my-4">
-  <div class="row ">
-      <div class="col-4  text-center">Tablero 1<img class="img-thumbnail " src="Cartas lotería/1.jpg" alt=""><a class="btn btn-primary d-block" href="inicio.html">Aceptar</a></div>
-      <div class="col-4  text-center">Tablero 2<img class="img-thumbnail" src="Cartas lotería/2.jpg" alt=""><a class="btn btn-primary d-block" href="inicio.html">Aceptar</a></div>
-      <div class="col-4  text-center">Tablero 3<img class="img-thumbnail" src="Cartas lotería/3.jpg" alt=""><a class="btn btn-primary d-block" href="inicio.html">Aceptar</a></div>
   </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/app.js"></script>
-  </body>
+
+  </div>
+  <div class="container text-center">
+    <button type="submit" class="btn btn-warning btn-lg">Continuar</button>
+  </div>
+  
+  </form>
+  
+  </div>
+
+  <!-- <form action="inicio.html">
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="jugador1" id="tablero3j1" value="tablero3">
+      <label class="form-check-label" for="jugador1">
+        Jugador 1
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="jugador2" id="tablero3j2" value="tablero3">
+      <label class="form-check-label" for="jugador2">
+        Jugador 2
+      </label>
+    </div>
+  </form> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="js/tarjetas.js" type="module"></script>
+  <script src="js/barajear.js" type="module"></script>
+  <script src="js/appindex.js" type="module"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <!-- <script src="js/fcontinuar.js" type="module"></script> -->
+</body>
+
 </html>
