@@ -8,270 +8,401 @@
   <title>Loteria</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@600&family=Palette+Mosaic&family=Playfair+Display:wght@700&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@600&family=Palette+Mosaic&family=Playfair+Display:wght@700&family=Raleway:wght@400;700;900&display=swap"
+    rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
+  <div class="papel"></div>
   <h1 class="text-center">Lotería</h1>
-  <!-- Boton de inicio -->
-
-  <!-- Card con tarjetas -->
-  <!-- <div class="card mx-auto text-center my-4 " >
-    <img src="" class="card-img-top mx-auto" alt="" style="max-width: 190px; ">
-    <div class="card-body">
-      <h5 class="card-title text-white"></h5>
-      <a href="#" class="btn btn-primary" id="carta">Obtener otra carta</a>
+  <div class="container ">
+    <div class="row g-0 ">
+      <div class="col-12 border-0" id="tarjetaspasda">
+      </div>
     </div>
-  </div> -->
-  <!-- Tableros -->
-  <!-- <img src="/img/Fondo_tarjeta.png" alt=""> -->
-  <div class="col-12 my-4 border-0">
-    <div class="row g-0">
-      <div class="col-sm-3 col-12  mx-auto border-0 ">
+
+  </div>
+  <div class="container my-4 border-0">
+    <div class="row g-0 ">
+      <!-- Tarjetas  -->
+      <div class="col-lg-3 col-12 mx-auto border-0">
         <div class="row g-0">
-          <button type="button" class="btn btn-primary btn-lg mx-auto " id="inicio">Iniciar Partida</button>
-          <div class="card mx-auto text-center my-4 ">
-            <img src="" class="card-img-top mx-auto rounded-3 " alt="" style="max-width: 190px; position: absolute;top: 50%;
-            left: 50%;transform: translate(-50%, -50%); ">
-            <div class="card-body" >
-              <h5 class="card-title text-white " style="position: absolute;bottom: 19%;
+          
+            <button type="button" class="btn btn-primary btn-lg " id="inicio" >
+              Iniciar Partida
+            </button>
+  
+            <button class="btn btn-primary btn-lg my-3" id="carta" >
+              Obtener otra carta
+            </button>
+         
+          <div class="card">
+            <img class="card-img-top mx-auto rounded-3" style="
+                  max-width: 200px;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                " />
+            <!-- <div class="card-body" >
+              <h5 class="card-title text-white" style="position: absolute;bottom: 0%;
               left: 50%;transform: translate(-50%, -50%);"></h5>
-              <button href="#" class="btn btn-primary btn-lg" id="carta" >Obtener otra carta</button>
-            </div>
+              
+            </div> -->
           </div>
         </div>
       </div>
+
       <!-- Tablero Jugador 1 -->
-      <div class="col-sm-3 col-6  mx-auto" style="background-color:white">
+      <div class="col-lg-4 col-6 mx-auto" style="background-color: white">
         <div class="row g-0">
           <h2 class="text-center">Jugardor 1</h2>
-          <div class="col-3 text-center div-ju" style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;"><img class="img-thumbnail tableroj1">
-            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1">
+          <div class="col-3 text-center div-ju" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj1" />
+            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1" />
           </div>
-          <div class="col-3  text-center div-ju "style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" >
-            <img class="img-thumbnail tableroj1">
-            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1">
+          <div class="col-3 text-center div-ju" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj1" />
+            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1" />
             <!-- <input class="form-check-input d-block mx-auto" type="checkbox" name="jugador1" value="El Diablito"
               id="gallo" onclick="validarCartaJugador1()"> -->
             <!-- <div class="circle circle-sm">
               <img src="img/frijol.png" class="frijol" alt="" >
             </div> -->
           </div>
-          <div class="col-3  text-center div-ju "style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj1 ">
-            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1">
+          <div class="col-3 text-center div-ju" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj1" />
+            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1" />
           </div>
-          <div class="col-3  text-center div-ju "style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj1 ">
-            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1">
+          <div class="col-3 text-center div-ju" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj1" />
+            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1" />
           </div>
           <!-- Segunda Fila -->
-          <div class="col-3 text-center div-ju "style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj1 ">
-            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1">
+          <div class="col-3 text-center div-ju" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj1" />
+            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1" />
           </div>
-          <div class="col-3 text-center div-ju "style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj1 ">
-            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1">
+          <div class="col-3 text-center div-ju" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj1" />
+            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1" />
           </div>
-          <div class="col-3 text-center div-ju "style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj1 ">
-            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1">
+          <div class="col-3 text-center div-ju" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj1" />
+            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1" />
           </div>
-          <div class="col-3 text-center div-ju "style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj1 ">
-            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1">
+          <div class="col-3 text-center div-ju" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj1" />
+            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1" />
           </div>
           <!-- Tercera Fila -->
-          <div class="col-3 text-center div-ju "style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj1 ">
-            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1">
+          <div class="col-3 text-center div-ju" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj1" />
+            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1" />
           </div>
-          <div class="col-3 text-center div-ju "style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj1 ">
-            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1">
+          <div class="col-3 text-center div-ju" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj1" />
+            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1" />
           </div>
-          <div class="col-3 text-center div-ju "style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj1 ">
-            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1">
+          <div class="col-3 text-center div-ju" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj1" />
+            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1" />
           </div>
-          <div class="col-3 text-center div-ju "style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj1 ">
-            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1">
+          <div class="col-3 text-center div-ju" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj1" />
+            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1" />
           </div>
           <!-- Cuarta Fila  -->
-          <div class="col-3 text-center div-ju "style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj1 ">
-            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1">
+          <div class="col-3 text-center div-ju" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj1" />
+            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1" />
           </div>
-          <div class="col-3 text-center div-ju "style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj1 ">
-            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1">
+          <div class="col-3 text-center div-ju" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj1" />
+            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1" />
           </div>
-          <div class="col-3 text-center div-ju "style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj1 ">
-            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1">
+          <div class="col-3 text-center div-ju" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj1" />
+            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1" />
           </div>
-          <div class="col-3 text-center div-ju "style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj1 ">
-            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1">
+          <div class="col-3 text-center div-ju" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj1" />
+            <input class="form-check-input d-block mx-auto j1" type="checkbox" name="jugador1" />
           </div>
         </div>
       </div>
       <!-- Tablero Jugador 2 -->
-      <div class="col-sm-3 col-6 mx-auto"style="background-color:white">
+      <div class="col-lg-4 col-6 mx-auto" style="background-color: white">
         <div class="row g-0">
           <h2 class="text-center">Jugardor 2</h2>
-          <div class="col-3  text-center div-ju2"style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj2">
-            <input class="form-check-input d-block mx-auto " type="checkbox" name="jugador2">
+          <div class="col-3 text-center div-ju2" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj2" />
+            <input class="form-check-input d-block mx-auto" type="checkbox" name="jugador2" />
           </div>
-          <div class="col-3  text-center div-ju2"style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj2">
-            <input class="form-check-input d-block mx-auto " type="checkbox" name="jugador2">
+          <div class="col-3 text-center div-ju2" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj2" />
+            <input class="form-check-input d-block mx-auto" type="checkbox" name="jugador2" />
           </div>
-          <div class="col-3  text-center div-ju2"style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj2">
-            <input class="form-check-input d-block mx-auto " type="checkbox" name="jugador2">
+          <div class="col-3 text-center div-ju2" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj2" />
+            <input class="form-check-input d-block mx-auto" type="checkbox" name="jugador2" />
           </div>
-          <div class="col-3  text-center div-ju2"style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj2">
-            <input class="form-check-input d-block mx-auto " type="checkbox" name="jugador2">
+          <div class="col-3 text-center div-ju2" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj2" />
+            <input class="form-check-input d-block mx-auto" type="checkbox" name="jugador2" />
           </div>
           <!-- Segunda Fila -->
-          <div class="col-3 text-center div-ju2"style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj2 ">
-            <input class="form-check-input d-block mx-auto " type="checkbox" name="jugador2">
+          <div class="col-3 text-center div-ju2" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj2" />
+            <input class="form-check-input d-block mx-auto" type="checkbox" name="jugador2" />
           </div>
-          <div class="col-3 text-center div-ju2"style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj2 ">
-            <input class="form-check-input d-block mx-auto " type="checkbox" name="jugador2">
+          <div class="col-3 text-center div-ju2" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj2" />
+            <input class="form-check-input d-block mx-auto" type="checkbox" name="jugador2" />
           </div>
-          <div class="col-3 text-center div-ju2"style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj2 ">
-            <input class="form-check-input d-block mx-auto " type="checkbox" name="jugador2">
+          <div class="col-3 text-center div-ju2" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj2" />
+            <input class="form-check-input d-block mx-auto" type="checkbox" name="jugador2" />
           </div>
-          <div class="col-3 text-center div-ju2"style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj2 ">
-            <input class="form-check-input d-block mx-auto " type="checkbox" name="jugador2">
+          <div class="col-3 text-center div-ju2" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj2" />
+            <input class="form-check-input d-block mx-auto" type="checkbox" name="jugador2" />
           </div>
           <!-- Tercera Fila -->
-          <div class="col-3 text-center div-ju2"style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj2 ">
-            <input class="form-check-input d-block mx-auto " type="checkbox" name="jugador2">
+          <div class="col-3 text-center div-ju2" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj2" />
+            <input class="form-check-input d-block mx-auto" type="checkbox" name="jugador2" />
           </div>
-          <div class="col-3 text-center div-ju2"style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj2 ">
-            <input class="form-check-input d-block mx-auto " type="checkbox" name="jugador2">
+          <div class="col-3 text-center div-ju2" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj2" />
+            <input class="form-check-input d-block mx-auto" type="checkbox" name="jugador2" />
           </div>
-          <div class="col-3 text-center div-ju2"style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj2 ">
-            <input class="form-check-input d-block mx-auto " type="checkbox" name="jugador2">
+          <div class="col-3 text-center div-ju2" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj2" />
+            <input class="form-check-input d-block mx-auto" type="checkbox" name="jugador2" />
           </div>
-          <div class="col-3 text-center div-ju2"style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj2 ">
-            <input class="form-check-input d-block mx-auto " type="checkbox" name="jugador2">
+          <div class="col-3 text-center div-ju2" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj2" />
+            <input class="form-check-input d-block mx-auto" type="checkbox" name="jugador2" />
           </div>
           <!-- Cuarta Fila  -->
-          <div class="col-3 text-center div-ju2"style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj2 ">
-            <input class="form-check-input d-block mx-auto " type="checkbox" name="jugador2">
+          <div class="col-3 text-center div-ju2" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj2" />
+            <input class="form-check-input d-block mx-auto" type="checkbox" name="jugador2" />
           </div>
-          <div class="col-3 text-center div-ju2"style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj2 ">
-            <input class="form-check-input d-block mx-auto " type="checkbox" name="jugador2">
+          <div class="col-3 text-center div-ju2" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj2" />
+            <input class="form-check-input d-block mx-auto" type="checkbox" name="jugador2" />
           </div>
-          <div class="col-3 text-center div-ju2"style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj2 ">
-            <input class="form-check-input d-block mx-auto " type="checkbox" name="jugador2">
+          <div class="col-3 text-center div-ju2" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj2" />
+            <input class="form-check-input d-block mx-auto" type="checkbox" name="jugador2" />
           </div>
-          <div class="col-3 text-center div-ju2"style="position: relative;
-          background-position: center;
-          background-repeat: no-repeat;" ><img class="img-thumbnail tableroj2">
-            <input class="form-check-input d-block mx-auto " type="checkbox" name="jugador2">
+          <div class="col-3 text-center div-ju2" style="
+                position: relative;
+                background-position: center;
+                background-repeat: no-repeat;
+              ">
+            <img class="img-thumbnail tableroj2" />
+            <input class="form-check-input d-block mx-auto" type="checkbox" name="jugador2" />
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="container text-center ">
-    <button class="btn btn-success loteria" id="ganador">
-      Loteria
-    </button>
+  <div class="container text-center">
+    <button class="btn btn-success loteria" id="ganador">Loteria</button>
   </div>
   <!-- Modal Gano Jugador 1-->
-<div class="modal fade" id="ganojugador1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="exampleModalLabel">FELICIDADES!!!</h4>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <h5>El Jugador 1 Gano !!!!!</h5>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
+  <div class="modal fade" id="ganojugador1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel">FELICIDADES!!!</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h5>El Jugador 1 Gano !!!!!</h5>
+        </div>
+        <div class="modal-footer">
+          <a href="index.html" class="btn btn-success">Reiniciar el Juego</a>
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">
+            Cerrar
+          </button>
+        </div>
       </div>
     </div>
   </div>
-</div>
   <!-- Modal Gano Jugador 2-->
-<div class="modal fade" id="ganojugador2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="exampleModalLabel">FELICIDADES!!!</h4>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <h5>El Jugador 2 Gano !!!!!</h5>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
+  <div class="modal fade" id="ganojugador2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel">FELICIDADES!!!</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h5>El Jugador 2 Gano !!!!!</h5>
+        </div>
+        <div class="modal-footer">
+          <a href="index.html" class="btn btn-success">Reiniciar el Juego</a>
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">
+            Cerrar
+          </button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  <!-- Faltan Cartas por seleccionar-->
+  <div class="modal fade" id="faltacartas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel">UPS!!!</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h5>Faltan Cartas por seleccionar</h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
